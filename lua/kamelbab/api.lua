@@ -42,14 +42,16 @@ end
 ---@param str string
 ---@return boolean
 M.is_kebab_case = function(str)
-	return str:match("^[a-z]+%-?[a-z]*$") ~= nil and str:match("%-%-") == nil
+	return string.match(str, "^%l+%-%l+") ~= nil
 end
 
 ---Given a string, returns true if it is in camel case, false otherwise.
 ---@param str string
 ---@return boolean
 M.is_camel_case = function(str)
-	return str:match("^[a-z]+[A-Z]") ~= nil
+	return string.match(str, "^%l+%u%l+") ~= nil
 end
 
 return M
+
+-- my-string-to-test-this-thing
