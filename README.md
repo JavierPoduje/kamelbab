@@ -1,5 +1,5 @@
 # Kamelbab
-Toggle between camelCase and kebab-case for the selected text.
+Toggle the visual selection between camelCase and kebab-case.
 
 ## Install
 
